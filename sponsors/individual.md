@@ -16,7 +16,6 @@ Airdb Team 开启了 [Github Sponsors](https://github.com/sponsors/airdb?frequen
 |0214| Zero | RMB | 8.88 | Wechat |
 |0214| 卜木 | RMB | 6.66 | Wechat |
 |0214| 雪林 | RMB | 66.66 | Wechat |
-|0214| 雪林 | RMB | 50.00 | Wechat |
 |0214| luo | RMB | 50.00 | Wechat |
 |0214| LU | RMB | 10.00 | Wechat |
 
