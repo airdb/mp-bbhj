@@ -1,16 +1,20 @@
 <template>
   <view class="article_list_item" @tap="jumpToDetail">
-    <view
-      class="article_detail"
-    >
+    <view class="article_detail">
       <view class="artclie_text_msg">
         <view class="article_author">
           <view class="nickname">{{ item.nickname }}</view>
         </view>
         <view class="article_title"> {{ item.title }}</view>
         <view>
-          <view> <text style="color:red;">失踪时间：</text> {{item.missed_at}}</view>
-          <view> <text style="color:red;">失踪地点：</text> {{item.missed_address}}</view>
+          <view>
+            <text style="color: red">失踪时间：</text>
+            {{ item.missed_at }}</view
+          >
+          <view>
+            <text style="color: red">失踪地点：</text>
+            {{ item.missed_address }}</view
+          >
         </view>
       </view>
     </view>
@@ -19,15 +23,15 @@
 
 <script setup>
 import { navigateTo } from "@tarojs/taro";
-import { toRefs } from "vue"
+import { toRefs } from "vue";
 
-const props = defineProps(['item'])
-const { item } = toRefs(props)
+const props = defineProps(["item"]);
+const { item } = toRefs(props);
 
 function jumpToDetail() {
   navigateTo({
-		url: `/pages/article/detail/index?id=${item.value.id}`
-	})
+    url: `/pages/index/query/index?id=${item.value.id}`,
+  });
 }
 </script>
 
@@ -53,14 +57,14 @@ function jumpToDetail() {
   background: #fff;
   margin: 20rpx 0rpx;
   border-radius: 20rpx;
-  border:1px solid #3333332e;
+  border: 1px solid #3333332e;
   .article_detail {
     box-sizing: border-box;
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    padding:20rpx;
+    padding: 20rpx;
     .artclie_text_msg {
       flex: 1;
     }
@@ -89,13 +93,13 @@ function jumpToDetail() {
       font-size: 28rpx;
       .ellipsis;
     }
-     .detail-btn{
-         border:none;
-         background: none;
-         color: #313BD1;
-         width :3rem;
-         float: right;
-       }
+    .detail-btn {
+      border: none;
+      background: none;
+      color: #313bd1;
+      width: 3rem;
+      float: right;
+    }
   }
   .img_cover {
     width: 160rpx;

@@ -78,6 +78,16 @@ export function searchLost() {
     return HTTPREQUEST.get('/bbhj/v1/lost/', { id })
 }
 
+export function searchLost() {
+    /**
+     * @description 文章详情
+     * @param {number} babyid
+     * @param {string} name
+     * @param {string} city
+     */
+    return HTTPREQUEST.post('/bbhj/v1/lost', {})
+}
+
 export function listRescue(pageNo) {
     /**
      * @description 文章详情

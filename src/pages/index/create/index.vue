@@ -270,17 +270,20 @@ export default {
         success(res) {
           const tempFilePaths = res.tempFilePaths;
           uploadFile({
-            url:
-              "https://wechat-1251018873.cos.ap-shanghai.myqcloud.com/mp-bbhj/data/202203/19/" +
-              "a.png",
+            url: "https://wechat-1251018873.cos.ap-shanghai.myqcloud.com/mp-bbhj/test/data/202203/19/",
             filePath: tempFilePaths[0],
             name: "file",
+            header: {
+              Method: "PUT",
+              "Content-Type": "multipart/form-data",
+              Authorization:
+                "q-sign-algorithm=sha1&q-ak=AKIDF7oK2ciCC0hCyZvFKDuQksoY9dv65D0b&q-sign-time=1647675265%3B1647678865&q-key-time=1647675265%3B1647678865&q-header-list=host&q-url-param-list=&q-signature=710a4e96f227ab3b79ff9c18dbadf714d537ad78",
+            },
             formData: {
-              "Content-Type": "",
-              success_action_status: 200,
-              "x-cos-security-token": "",
-              Signature:
-                "YT0xMjUxMDE4ODczJms9QUtJREY3b0syY2lDQzBoQ3ladkZLRHVRa3NvWTlkdjY1RDBiJmU9MCZ0PTE2NDc2NzE5MDEmcj1HTVdKR1NBUEdBJmY9MTI1MTAxODg3My93ZWNoYXQtMTI1MTAxODg3My9tcC1iYmhqL2RhdGEvMjAyMjAzLzE5JmI9d2VjaGF0LTEyNTEwMTg4NzMsDFe1uGpnt3PU9JM/ZD8Yaveqkw==",
+              key: "aaaa",
+              signature:
+                "q-sign-algorithm=sha1&q-ak=AKIDF7oK2ciCC0hCyZvFKDuQksoY9dv65D0b&q-sign-time=1647675265%3B1647678865&q-key-time=1647675265%3B1647678865&q-header-list=host&q-url-param-list=&q-signature=710a4e96f227ab3b79ff9c18dbadf714d537ad78",
+              file: "hello.jpg",
               user: "test",
             },
             success(res) {
